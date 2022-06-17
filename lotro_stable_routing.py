@@ -2305,7 +2305,7 @@ if __name__ == "__main__":
 		paths = find_all_paths(stables, source, destination)
 
 		if paths:
-			print(f"\n{len(paths)} paths found:\n")
+			print(f"\n{len(paths):,} paths found:\n")
 			for i, path in enumerate(sorted(paths, key=len)[:results], 1):
 				print(f"{i})  ({len(path)} hops)", " -> ".join(path))
 		else:
