@@ -1,4 +1,3 @@
-from concurrent.futures import BrokenExecutor
 import difflib
 from typing import Union, Any
 
@@ -2286,31 +2285,31 @@ def print_suggested(_type, queried_stable):
 	print(f"\nCould not find the {_type} stable '{queried_stable}'. Perhaps you mean:\n - {f'{new_line} - '.join(suggested_stables)}")
 
 
-source = ask("From:", require_answer=True).lower()
-destination = ask("To:", require_answer=True).lower()
-results = ask("Number of results:", _type=int, enforce_rule=lambda x: x>0)
-if results == "": 
-	results = 5
+if __name__ == "__main__":
+	while True:
+		source = ask("\nFrom:", require_answer=True, post_cursor=" ").lower()
+		destination = ask("To:", require_answer=True, post_cursor=" ").lower()
+		results = ask("Number of results:", _type=int, enforce_rule=lambda x: x>0, post_cursor=" ")
+		if results == "": 
+			results = 5
 
-quit = False
-for _type, _input in (("source", source), ("destination", destination)):
-	if _input not in stables:
-		print_suggested(_type, _input)
-		quit = True	
-if quit: 
-	exit()
-
-
-paths = find_all_paths(stables, source, destination)
-
-if paths:
-	print(f"\n{len(paths)} paths found:\n")
-	for i, path in enumerate(sorted(paths, key=len)[:results], 1):
-		print(f"{i})  ({len(path)} hops)", " -> ".join(path))
-else:
-	print("No paths found.")
+		quit = False
+		for _type, _input in (("source", source), ("destination", destination)):
+			if _input not in stables:
+				print_suggested(_type, _input)
+				quit = True
+		if quit:
+			continue
 
 
+		paths = find_all_paths(stables, source, destination)
+
+		if paths:
+			print(f"\n{len(paths)} paths found:\n")
+			for i, path in enumerate(sorted(paths, key=len)[:results], 1):
+				print(f"{i})  ({len(path)} hops)", " -> ".join(path))
+		else:
+			print("No paths found.")
 
 
 
