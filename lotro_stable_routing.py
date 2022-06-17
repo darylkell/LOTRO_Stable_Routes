@@ -2285,6 +2285,19 @@ def print_suggested(_type, queried_stable):
 	print(f"\nCould not find the {_type} stable '{queried_stable}'. Perhaps you mean:\n - {f'{new_line} - '.join(suggested_stables)}")
 
 
+
+def get_number_of_results(num):
+	if num:
+		return int(num)
+	elif args.source and args.destination and not num:
+		return 5
+	else:
+		results = ask("Number of results:", _type=int, enforce_rule=lambda x: x>0, post_cursor=" ")
+	if results == "": 
+		results = 5
+	return results
+
+
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="Provide a source, destination, and desired number of results (number)")
 	parser.add_argument("source", nargs="?", help="Stable to leave from")
@@ -2295,9 +2308,7 @@ if __name__ == "__main__":
 	while True:
 		source = (args.source or ask("\nFrom:", require_answer=True, post_cursor=" ")).lower()
 		destination = (args.destination or ask("To:", require_answer=True, post_cursor=" ")).lower()
-		results = args.number or ask("Number of results:", _type=int, enforce_rule=lambda x: x>0, post_cursor=" ")
-		if results == "": 
-			results = 5
+		results = get_number_of_results(args.number)
 
 		quit = False
 		for _type, _input in (("source", source), ("destination", destination)):
@@ -2307,9 +2318,7 @@ if __name__ == "__main__":
 		if quit:
 			continue
 
-
 		paths = find_all_paths(stables, source, destination)
-
 		if paths:
 			print(f"\n{len(paths):,} paths found:\n")
 			for i, path in enumerate(sorted(paths, key=len)[:results], 1):
@@ -2319,4 +2328,3 @@ if __name__ == "__main__":
 
 		if args:
 			break
-
