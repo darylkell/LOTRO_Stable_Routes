@@ -2175,7 +2175,7 @@ def ask(question: str="",
 		def rule_enforcer(x):
 			""" Internal function used only by validate_type """
 			if enforce_rule(x):
-				return _input
+				return x
 			else:
 				raise ValueError("Input does not meet requirements.")
 		
@@ -2295,7 +2295,7 @@ def get_number_of_results(num):
 		results = ask("Number of results:", _type=int, enforce_rule=lambda x: x>0, post_cursor=" ")
 	if results == "": 
 		results = 5
-	return int(results)
+	return results
 
 
 if __name__ == "__main__":
