@@ -2295,7 +2295,7 @@ def get_number_of_results(num):
 		results = ask("Number of results:", _type=int, enforce_rule=lambda x: x>0, post_cursor=" ")
 	if results == "": 
 		results = 5
-	return results
+	return int(results)
 
 
 if __name__ == "__main__":
@@ -2322,9 +2322,9 @@ if __name__ == "__main__":
 		if paths:
 			print(f"\n{len(paths):,} paths found:\n")
 			for i, path in enumerate(sorted(paths, key=len)[:results], 1):
-				print(f"{i})  ({len(path)} hops)", " -> ".join(path))
+				print(f"{i:>{len(str(results))}})  ({len(path)} hops)", " -> ".join(path))
 		else:
 			print("No paths found.")
 
-		if args:
+		if any([args.source, args.destination, args.number]):
 			break
