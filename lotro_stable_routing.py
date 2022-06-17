@@ -1,6 +1,6 @@
 import difflib
 from typing import Union, Any
-
+import argparse
 
 stables = {
 	"ettenmoors": [
@@ -2286,10 +2286,16 @@ def print_suggested(_type, queried_stable):
 
 
 if __name__ == "__main__":
+	parser = argparse.ArgumentParser(description="Provide a source, destination, and desired number of results (number)")
+	parser.add_argument("source", nargs="?", help="Stable to leave from")
+	parser.add_argument("destination", nargs="?", help="Stable to arrive at")
+	parser.add_argument("number", type=int, nargs="?", help="Number of results to return")
+	args = parser.parse_args()
+	
 	while True:
-		source = ask("\nFrom:", require_answer=True, post_cursor=" ").lower()
-		destination = ask("To:", require_answer=True, post_cursor=" ").lower()
-		results = ask("Number of results:", _type=int, enforce_rule=lambda x: x>0, post_cursor=" ")
+		source = (args.source or ask("\nFrom:", require_answer=True, post_cursor=" ")).lower()
+		destination = (args.destination or ask("To:", require_answer=True, post_cursor=" ")).lower()
+		results = args.number or ask("Number of results:", _type=int, enforce_rule=lambda x: x>0, post_cursor=" ")
 		if results == "": 
 			results = 5
 
@@ -2311,5 +2317,6 @@ if __name__ == "__main__":
 		else:
 			print("No paths found.")
 
-
+		if args:
+			break
 
