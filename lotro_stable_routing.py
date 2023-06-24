@@ -1,3 +1,5 @@
+# updated for Update 33 - Cardolan/Swanfleet
+
 import difflib
 from typing import Union, Any
 import argparse
@@ -23,6 +25,9 @@ stables = {
 		"trestlebridge",
 		"hobbiton",
 		"michel delving",
+		"adrath",
+		"herne",
+		"mossward"
 	],
 	"south bree": [
 		"minas tirith (after)",
@@ -177,7 +182,8 @@ stables = {
 		"noglond",
 		"thorin's hall homesteads",
 		"ettenmoors",
-		"michel delving"
+		"michel delving",
+		"mossward"
 	],
 	"noglond": [
 		"gondamon",
@@ -242,7 +248,9 @@ stables = {
 		"nobottle",
 		"shire homesteads",
 		"stock",
-		"tighfield"
+		"tighfield",
+		"mossward",
+		"sarn ford"
 	],
 	"nobottle": [
 		"gamwich",
@@ -490,7 +498,10 @@ stables = {
 	"the forsaken inn": [
 		"south bree",
 		"ost guruth",
-		"breeland homesteads"
+		"breeland homesteads",
+		"caranost",
+		"scurloc farm",
+		"herne"
 	],
 	"ost guruth": [
 		"the forsaken inn",
@@ -727,6 +738,7 @@ stables = {
 		"lhanuch",
 		"echad daervunn",
 		"harndirion",
+		"lintrev"
 	],
 	"echad daervunn": [
 		"echad dagoras",
@@ -743,7 +755,10 @@ stables = {
 		"south bree",
 		"inner caras galadhon",
 		"galtrev",
-		"rivendell stables"
+		"rivendell stables",
+		"lhan garan",
+		"lintrev",
+		"mossward"
 	],
 	"harndirion": [
 		"echad dagoras",
@@ -2123,9 +2138,131 @@ stables = {
 		"edoras",
 		"aldburg" 
 	],
-	"shire homesteads": [
-
+	"sarn ford": [
+		"andrath",
+		"caranost",
+		"scurloc farm",
+		"herne",
+		"michel delving",
+		"tharbad"
 	],
+	"andrath": [
+		"west bree",
+		"caranost",
+		"scurloc farm",
+		"herne",
+		"sarn ford",
+		"tharbad"
+	],
+	"herne": [
+		"andrath",
+		"west bree",
+		"carnost",
+		"scurloc farm",
+		"the forsaken inn",
+		"lhan garan",
+		"mossward",
+		"rivendell stables",
+		"sarn ford",
+		"tharbad"
+	],
+	"caranost": [
+		"andrath",
+		"scurloc farm",
+		"the forsaken inn",
+		"herne",
+		"sarn ford",
+		"tharbad"
+	],
+	"tharbad": [
+		"andrath",
+		"caranost",
+		"scurloc farm",
+		"herne",
+		"lhan garan",
+		"mossward",
+		"sarn ford"
+	],
+	"mossward": [
+		"west bree",
+		"caras gelebren",
+		"celondim",
+		"clegur",
+		"glyn helyg",
+		"herne",
+		"lhan garan",
+		"lhanuch",
+		"lintrev",
+		"michel delving",
+		"rivendell stables",
+		"tharbad",
+		"thorin's gate",
+		"western eregion"
+	],
+	"clegur": [
+		"caras gelebren",
+		"glyn helyg",
+		"lhan garan",
+		"lintrev",
+		"mossward",
+		"western eregion"
+	],
+	"glyn helyg": [
+		"caras gelebren",
+		"clegur",
+		"lhan garan",
+		"lintrev",
+		"mossward",
+		"western eregion"
+	],
+	"lintrev": [
+		"caras gelebren",
+		"clegur",
+		"glyn helyg",
+		"lhan garan",
+		"lhanuch",
+		"maur tulhau",
+		"mossward",
+		"western eregion"
+	],
+	"caras gelebren": [
+		"clegur",
+		"echad mirobel",
+		"glyn gelyg",
+		"lhan garan",
+		"lintrev",
+		"mossward",
+		"western eregion"
+	],
+	"lhan garan": [
+		"caras gelebren",
+		"clegur",
+		"glyn helyg",
+		"herne",
+		"lhanuch",
+		"lintrev",
+		"mossward",
+		"tharbad",
+		"western eregion"
+	],
+	"scurloc farm": [
+		"andrath",
+		"caranost",
+		"the forsaken inn",
+		"herne",
+		"sarn ford",
+		"tharbad"
+	],
+	"western eregion": [
+		"caras gelebren",
+		"clegur",
+		"echad mirobel",
+		"glyn helyg",
+		"lhan garan",
+		"lintrev",
+		"mossward"
+	],
+	"shire homesteads": [],
 	"thorin's hall homesteads": [],
 	"abodes of erebor": [],
 	"cape of belfalas housing neighborhood": [],
