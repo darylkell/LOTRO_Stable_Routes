@@ -2422,7 +2422,6 @@ def print_suggested(_type, queried_stable):
 	print(f"\nCould not find the {_type} stable '{queried_stable}'. Perhaps you mean:\n - {f'{new_line} - '.join(suggested_stables)}")
 
 
-
 def get_number_of_results(num):
 	if num:
 		return int(num)
