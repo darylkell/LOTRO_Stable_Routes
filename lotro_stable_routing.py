@@ -25,7 +25,7 @@ stables = {
 		"trestlebridge",
 		"hobbiton",
 		"michel delving",
-		"adrath",
+		"andrath",
 		"herne",
 		"mossward"
 	],
