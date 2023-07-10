@@ -2157,7 +2157,7 @@ stables = {
 	"herne": [
 		"andrath",
 		"west bree",
-		"carnost",
+		"caranost",
 		"scurloc farm",
 		"the forsaken inn",
 		"lhan garan",
@@ -2228,7 +2228,7 @@ stables = {
 	"caras gelebren": [
 		"clegur",
 		"echad mirobel",
-		"glyn gelyg",
+		"glyn helyg",
 		"lhan garan",
 		"lintrev",
 		"mossward",
