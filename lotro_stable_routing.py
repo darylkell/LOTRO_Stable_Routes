@@ -435,7 +435,8 @@ stables = {
 		"meluinen",
 		"othrikar",
 		"trestlebridge",
-		"rivendell stables"
+		"rivendell stables",
+		"bail avarc"
 	],
 	"meluinen": [
 		"esteldin",
@@ -488,7 +489,8 @@ stables = {
 		"esteldin",
 		"rivendell stables",
 		"suri-kyla",
-		"iorelen's camp"
+		"iorelen's camp",
+		"bail avarc"
 	],
 	"iorelen's camp": [
 		"aughaire",
@@ -665,7 +667,8 @@ stables = {
 		"esteldin",
 		"vegbar",
 		"ettenmoors",
-		"gath forthnir"
+		"gath forthnir",
+		"bail avarc"
 	],
 	"the last homely house": [
 		"tham lumren",
@@ -2261,6 +2264,11 @@ stables = {
 		"lhan garan",
 		"lintrev",
 		"mossward"
+	],
+	"bail avarc": [
+		"esteldin",
+		"rivendell stables",
+		"gath forthnir"
 	],
 	"shire homesteads": [],
 	"thorin's hall homesteads": [],
