@@ -3030,7 +3030,7 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="Provide a source, destination, and desired number of results (number)")
 	parser.add_argument("source", nargs="?", help="Stable to leave from")
 	parser.add_argument("destination", nargs="?", help="Stable to arrive at")
-	parser.add_argument("number", type=int, nargs="?", help="Number of results to return")
+	parser.add_argument("number", type=int, nargs="?", help="Number of results to return (default: 5)")
 	args = parser.parse_args()
 	
 	while True:
