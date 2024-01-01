@@ -17,7 +17,7 @@ options:
 
 ### Example:
 ```
-python .\lotro_stable_routing.py                                                                                   ─╯
+python .\lotro_stable_routing.py                                                                                   
 
 From: esteldin
 To: ost rimmon
