@@ -9,11 +9,13 @@ Provide a source, destination, and desired number of results (number)
 positional arguments:
   source       Stable to leave from
   destination  Stable to arrive at
-  number       Number of results to return
+  number       Number of results to return (default: 5)
 
 options:
   -h, --help   show this help message and exit
 ```
+
+If you do not provide arguments you will be prompted for them as per below example.
 
 ### Example:
 ```
