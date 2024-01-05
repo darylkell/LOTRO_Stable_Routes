@@ -33,3 +33,7 @@ Number of results: 5
 4)  (5 hops) esteldin -> rivendell stables -> south bree -> aldburg -> ost rimmon
 5)  (5 hops) esteldin -> rivendell stables -> zidir-nesad -> minas tirith -> ost rimmon
 ```
+
+### Security Warning
+------
+Please properly vet anything you download from the internet, including this script. It could do anything.
